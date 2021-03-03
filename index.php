@@ -1,26 +1,6 @@
-<<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
 <?php
-    $server = 'localhost';
-    $user = 'root';
-    $pass = 'dev';
-    $bdd = 'classe_test_php';
+require_once 'config_phpstorm.php';
 
-    try{
-        $connect = ""
-    }
-    catch(PDOException $exception){
-        echo $exception->getMessage();
-    }
-?>
-
-</body>
-</html>
+//create connect
+ $UtilisateursStatics = new UtilisateursStatics();
+ $ClientsStatics = new ClientsStatics();
