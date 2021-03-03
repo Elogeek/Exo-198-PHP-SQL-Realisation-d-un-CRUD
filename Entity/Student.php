@@ -1,6 +1,6 @@
 <?php
 
-class Eleve {
+class Student {
 
     private ?int $id;
     private ?string $nom;
@@ -9,6 +9,10 @@ class Eleve {
 
     /**
      * Eleve construct
+     * @param int|null $id
+     * @param string|null $nom
+     * @param string|null $prenom
+     * @param int|null $age
      */
     public function __construct(int $id = null, string $nom =null, string $prenom = null, int $age = null) {
         $this->id = $id;
@@ -18,19 +22,19 @@ class Eleve {
     }
 
     //return id
-    public function getId(): int {
+    public function getId(): ?int {
         return $this->id;
     }
-    public function setId(int $id) : Eleve {
+    public function setId(int $id): Student {
         $this->id = $id;
         return $this;
     }
     //@param string $nom
-    public function setNom(string $nom): Eleve{
+    public function setNom(string $nom): Student {
         $this->nom = $nom;
         return $this;
     }
-    public function getNom():string {
+    public function getNom(): string {
         return $this->nom;
     }
 
@@ -38,12 +42,12 @@ class Eleve {
     public function getPrenom(): ?string {
         return $this->prenom;
     }
-    public function setPrenom(string $prenom) :Eleve {
+    public function setPrenom(string $prenom): Student {
         $this->prenom = $prenom;
         return $this;
     }
     //@param int $age
-    public function setAge(?int $age): Eleve {
+    public function setAge(?int $age): Student {
         $this->age = $age;
         return $this;
     }
